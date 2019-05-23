@@ -13,7 +13,6 @@ class LeafletMap extends StatefulWidget {
 class _LeafletMapState extends State<LeafletMap> {
   @override
   Widget build(BuildContext context) {
-    
     return BlocProvider(
       child: MaterialApp(
       debugShowCheckedModeBanner: false,

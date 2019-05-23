@@ -37,7 +37,7 @@ class InputSearch extends StatelessWidget {
           );
         },
         onSuggestionSelected: (suggestion) {
-          bloc.altCoord(LatLng(-1.450969, -48.494160));
+          bloc.altCoord(LatLng(-1.444143, -48.593452));
         },
       ),
     );

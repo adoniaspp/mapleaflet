@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:latlong/latlong.dart';
@@ -5,23 +7,26 @@ import 'package:latlong/latlong.dart';
 
 class MapBloc extends BlocBase {
 
-MapBloc();
+//var _mapController = PublishSubject<int>();
 
-//var _counterControler = StreamController().stream.asBroadcastStream();
-var _mapController = BehaviorSubject<LatLng>.seeded(LatLng(-1.449786, -48.488415));
+MapBloc(){
+  //inMap.add(1);
+}
 
-Stream<LatLng> get outMap => _mapController.stream;
-
-Sink<LatLng> get inMap => _mapController.sink;
+var _mapController = BehaviorSubject<double>();
+//Stream<LatLng> get outMap => _mapController.stream;
+Stream<double> get outMap => _mapController.stream;
+//Sink<LatLng> get inMap => _mapController.sink;
+Sink<double> get inMap => _mapController.sink;
 
 altCoord(LatLng a){
-  inMap.add(a);
+  inMap.add(10.0);
 }
 
 @override
   void dispose() {
-    _mapController.close();
     super.dispose();
+        _mapController.close();
   }
 
 }
