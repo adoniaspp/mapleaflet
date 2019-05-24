@@ -4,8 +4,17 @@ import 'package:map_leaflet/search.dart';
 import 'package:map_leaflet/map_bloc.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:latlong/latlong.dart';
+import 'package:flutter_map/flutter_map.dart';
+
 
 class InputSearch extends StatelessWidget {
+
+  InputSearch({
+    Key key,
+    this.mapController
+  }) : super(key:key);
+
+  MapController mapController;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +46,8 @@ class InputSearch extends StatelessWidget {
           );
         },
         onSuggestionSelected: (suggestion) {
-          bloc.altCoord(LatLng(-1.444143, -48.593452));
+          mapController.move(LatLng(-1.450969, -48.494160), 16);
+          //bloc.altCoord(LatLng(-1.444143, -48.593452));
         },
       ),
     );

@@ -11,11 +11,13 @@ class MapFlutter extends StatefulWidget {
 }
 
 class _MapFlutterState extends State<MapFlutter> {
+  MapController mapController;
   MapBloc bloc;
   @override
   void initState() {
     super.initState();
     bloc = BlocProvider.getBloc<MapBloc>();
+    mapController = MapController();
   }
   final listMarkers = <Marker>[
     Marker(
@@ -148,18 +150,18 @@ class _MapFlutterState extends State<MapFlutter> {
   ];
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder(
+    /*return StreamBuilder(
         stream: bloc.outMap,
         initialData: 18.0,
         builder: (context, snapshot) {
-          print('${snapshot.data}');
+          print('${snapshot.data}');*/
           return Scaffold(
             body: Stack(children: <Widget>[
               FlutterMap(
+                mapController: mapController,
                 options: MapOptions(
                   center: LatLng(-1.449786, -48.488415),
-                  //center: snapshot.data,
-                  zoom: snapshot.data,
+                  zoom: 15,
                   maxZoom: 20.0,
                   minZoom: 3.0,
                 ),
@@ -174,9 +176,9 @@ class _MapFlutterState extends State<MapFlutter> {
                   )
                 ],
               ),
-              InputSearch(),
+              InputSearch(mapController: mapController,),
             ]),
           );
-        });
+        //});
   }
 }
