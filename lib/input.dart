@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:map_leaflet/search.dart';
-import 'package:map_leaflet/map_bloc.dart';
 import 'package:latlong/latlong.dart';
 import 'package:flutter_map/flutter_map.dart';
 
@@ -13,7 +12,7 @@ class InputSearch extends StatelessWidget {
     this.mapController
   }) : super(key:key);
 
-  MapController mapController;
+  final MapController mapController;
   final TextEditingController _typeController = TextEditingController(); 
 
   @override
@@ -23,7 +22,7 @@ class InputSearch extends StatelessWidget {
       child: TypeAheadField(
         textFieldConfiguration: TextFieldConfiguration(
             controller: this._typeController,
-            style: TextStyle(fontSize: 25, color: Colors.blue),
+            style: TextStyle(fontSize: 20, color: Colors.blue),
             decoration: InputDecoration(                              
                 filled: true,
                 fillColor: Colors.white,
@@ -31,7 +30,7 @@ class InputSearch extends StatelessWidget {
                 suffixIcon: Icon(
                   Icons.directions_bus,
                   size: 35,
-                  color: Colors.blue,
+                  color: Colors.brown[400],
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),

@@ -1,6 +1,7 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:latlong/latlong.dart';
+import 'package:flutter_map/flutter_map.dart';
+
 
 class MapBloc extends ChangeNotifier {
   String linhaOnibus = "";
@@ -8,10 +9,12 @@ class MapBloc extends ChangeNotifier {
   String get linha => this.linhaOnibus;
 
   LatLng pesquisaLinhasObibus(String linha) {
-    notifyListeners();
+      //TODO buscar linha de onibus e retornar a coordenada.
+    return LatLng(1, 2);
   }
 
-  void selecionarLinhaOnibus(LatLng a) {
-    notifyListeners();
+  List<Marker> retornarListaMarcadores(LatLng a) {
+       //TODO retornar a lista de marcadores.
+      return List<Marker>();
   }
 }

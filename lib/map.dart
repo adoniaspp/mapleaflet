@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong/latlong.dart';
-import 'package:map_leaflet/map_bloc.dart';
 import 'input.dart';
 
 class MapFlutter extends StatefulWidget {
@@ -37,7 +36,7 @@ class _MapFlutterState extends State<MapFlutter> {
                           child: Column(
                             children: <Widget>[
                               Container(
-                                color: Colors.blueAccent,
+                                color: Colors.pink[300],
                                 height: 90,
                                 child: Row(
                                   children: <Widget>[
@@ -150,6 +149,13 @@ class _MapFlutterState extends State<MapFlutter> {
   @override
   Widget build(BuildContext context) {
           return Scaffold(
+            floatingActionButton: FloatingActionButton(
+              backgroundColor: Colors.brown[400],
+              child: Icon(Icons.my_location,),
+              onPressed: (){
+                mapController.move(LatLng(-1.449786, -48.488415), 15);
+              },
+            ),
             body: Stack(children: <Widget>[
               FlutterMap(
                 mapController: mapController,

@@ -11,7 +11,6 @@ class Marcador{
 
   Marcador(this.coordenada, this.codigo, this.descricao);
 
-  @override
   Marker gerarMarcador() {
     return Marker(
         width: 50,
@@ -32,7 +31,7 @@ class Marcador{
                           child: Column(
                             children: <Widget>[
                               Container(
-                                color: Colors.blueAccent,
+                                color: Colors.amber,
                                 height: 90,
                                 child: Row(
                                   children: <Widget>[
