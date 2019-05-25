@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong/latlong.dart';
-import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:map_leaflet/map_bloc.dart';
 import 'input.dart';
 
@@ -12,13 +11,13 @@ class MapFlutter extends StatefulWidget {
 
 class _MapFlutterState extends State<MapFlutter> {
   MapController mapController;
-  MapBloc bloc;
+
   @override
   void initState() {
     super.initState();
-    bloc = BlocProvider.getBloc<MapBloc>();
     mapController = MapController();
   }
+
   final listMarkers = <Marker>[
     Marker(
         width: 50,
@@ -31,7 +30,7 @@ class _MapFlutterState extends State<MapFlutter> {
                 size: 50,
               ),
               onTap: () {
-                showModalBottomSheet(
+                showBottomSheet(
                     context: context,
                     builder: (context) => Container(
                           height: 180,
@@ -90,7 +89,7 @@ class _MapFlutterState extends State<MapFlutter> {
                 size: 50,
               ),
               onTap: () {
-                showModalBottomSheet(
+                showBottomSheet(
                   context: context,
                   builder: (context) => Container(),
                 );
@@ -107,7 +106,7 @@ class _MapFlutterState extends State<MapFlutter> {
                 size: 50,
               ),
               onTap: () {
-                showModalBottomSheet(
+                showBottomSheet(
                   context: context,
                   builder: (context) => Container(),
                 );
@@ -124,7 +123,7 @@ class _MapFlutterState extends State<MapFlutter> {
                 size: 50,
               ),
               onTap: () {
-                showModalBottomSheet(
+                showBottomSheet(
                   context: context,
                   builder: (context) => Container(),
                 );
@@ -141,7 +140,7 @@ class _MapFlutterState extends State<MapFlutter> {
                 size: 50,
               ),
               onTap: () {
-                showModalBottomSheet(
+                showBottomSheet(
                   context: context,
                   builder: (context) => Container(),
                 );
@@ -150,11 +149,6 @@ class _MapFlutterState extends State<MapFlutter> {
   ];
   @override
   Widget build(BuildContext context) {
-    /*return StreamBuilder(
-        stream: bloc.outMap,
-        initialData: 18.0,
-        builder: (context, snapshot) {
-          print('${snapshot.data}');*/
           return Scaffold(
             body: Stack(children: <Widget>[
               FlutterMap(
