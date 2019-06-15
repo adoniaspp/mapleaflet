@@ -32,11 +32,11 @@ class _MapFlutterState extends State<MapFlutter> {
                 showBottomSheet(
                     context: context,
                     builder: (context) => Container(
-                          height: 180,
+                          height: 270,
                           child: Column(
                             children: <Widget>[
                               Container(
-                                color: Colors.pink[300],
+                                color: Colors.green[300],
                                 height: 90,
                                 child: Row(
                                   children: <Widget>[
@@ -51,7 +51,7 @@ class _MapFlutterState extends State<MapFlutter> {
                                           height: 30,
                                         ),
                                         Text(
-                                          "454 - Onibus xpto",
+                                          "631 - Marex x Ver-o-Peso",
                                           style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 22,
@@ -62,15 +62,66 @@ class _MapFlutterState extends State<MapFlutter> {
                                     SizedBox(
                                       width: 50,
                                     ),
-                                    Text(
-                                      "454",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 22,
-                                      ),
-                                    ),
                                   ],
                                 ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: <Widget>[
+                                  Text(
+                                    "Tempo de chegada: 20 minutos",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  Icon(Icons.departure_board),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.network(
+                                    "https://cdn2.iconfinder.com/data/icons/fat-man/271/fat-man-action-1002-512.png",
+                                    scale: 12,
+                                    color: Colors.green,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text("Cadeira para pessoas obesas"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.accessible,
+                                    color: Colors.green,
+                                    size: 40,
+                                  ),
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Rampa/Elevador para cadeirantes"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Image.network(
+                                    "http://www.inpi.gov.br/menu-servicos/patente/arquivos/freepikflaticon.comoldman.png/@@images/image.png",
+                                    scale: 12,
+                                    color: Colors.red,
+                                  ),
+                                  Text("Prioridades"),
+                                ],
                               )
                             ],
                           ),
@@ -89,9 +140,102 @@ class _MapFlutterState extends State<MapFlutter> {
               ),
               onTap: () {
                 showBottomSheet(
-                  context: context,
-                  builder: (context) => Container(),
-                );
+                    context: context,
+                    builder: (context) => Container(
+                          height: 270,
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                color: Colors.green[300],
+                                height: 90,
+                                child: Row(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        SizedBox(
+                                          height: 30,
+                                        ),
+                                        Text(
+                                          "632 - Marex x Felipe Patroni",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 22,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 50,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: <Widget>[
+                                  Text(
+                                    "Tempo de chegada: 10 minutos",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  Icon(Icons.departure_board),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.network(
+                                    "https://cdn2.iconfinder.com/data/icons/fat-man/271/fat-man-action-1002-512.png",
+                                    scale: 12,
+                                    color: Colors.green,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text("Cadeira para pessoas obesas"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.accessible,
+                                    color: Colors.red,
+                                    size: 40,
+                                  ),
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Rampa/Elevador para cadeirantes"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Image.network(
+                                    "http://www.inpi.gov.br/menu-servicos/patente/arquivos/freepikflaticon.comoldman.png/@@images/image.png",
+                                    scale: 12,
+                                    color: Colors.red,
+                                  ),
+                                  Text("Prioridades"),
+                                ],
+                              )
+                            ],
+                          ),
+                        ));
               },
             )))),
     Marker(
@@ -106,9 +250,102 @@ class _MapFlutterState extends State<MapFlutter> {
               ),
               onTap: () {
                 showBottomSheet(
-                  context: context,
-                  builder: (context) => Container(),
-                );
+                    context: context,
+                    builder: (context) => Container(
+                          height: 270,
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                color: Colors.green[300],
+                                height: 90,
+                                child: Row(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        SizedBox(
+                                          height: 30,
+                                        ),
+                                        Text(
+                                          "634 - Marex x Arsenal",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 22,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 50,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: <Widget>[
+                                  Text(
+                                    "Tempo de chegada: 30 minutos",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  Icon(Icons.departure_board),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.network(
+                                    "https://cdn2.iconfinder.com/data/icons/fat-man/271/fat-man-action-1002-512.png",
+                                    scale: 12,
+                                    color: Colors.green,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text("Cadeira para pessoas obesas"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.accessible,
+                                    color: Colors.green,
+                                    size: 40,
+                                  ),
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Rampa/Elevador para cadeirantes"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Image.network(
+                                    "http://www.inpi.gov.br/menu-servicos/patente/arquivos/freepikflaticon.comoldman.png/@@images/image.png",
+                                    scale: 12,
+                                    color: Colors.green,
+                                  ),
+                                  Text("Prioridades"),
+                                ],
+                              )
+                            ],
+                          ),
+                        ));
               },
             )))),
     Marker(
@@ -123,9 +360,102 @@ class _MapFlutterState extends State<MapFlutter> {
               ),
               onTap: () {
                 showBottomSheet(
-                  context: context,
-                  builder: (context) => Container(),
-                );
+                    context: context,
+                    builder: (context) => Container(
+                          height: 270,
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                color: Colors.green[300],
+                                height: 90,
+                                child: Row(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        SizedBox(
+                                          height: 30,
+                                        ),
+                                        Text(
+                                          "636 - Marex x Pres. Vargas",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 22,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 50,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: <Widget>[
+                                  Text(
+                                    "Tempo de chegada: 1 hora",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  Icon(Icons.departure_board),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.network(
+                                    "https://cdn2.iconfinder.com/data/icons/fat-man/271/fat-man-action-1002-512.png",
+                                    scale: 12,
+                                    color: Colors.red,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text("Cadeira para pessoas obesas"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.accessible,
+                                    color: Colors.red,
+                                    size: 40,
+                                  ),
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Rampa/Elevador para cadeirantes"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Image.network(
+                                    "http://www.inpi.gov.br/menu-servicos/patente/arquivos/freepikflaticon.comoldman.png/@@images/image.png",
+                                    scale: 12,
+                                    color: Colors.red,
+                                  ),
+                                  Text("Prioridades"),
+                                ],
+                              )
+                            ],
+                          ),
+                        ));
               },
             )))),
     Marker(
@@ -140,45 +470,141 @@ class _MapFlutterState extends State<MapFlutter> {
               ),
               onTap: () {
                 showBottomSheet(
-                  context: context,
-                  builder: (context) => Container(),
-                );
+                    context: context,
+                    builder: (context) => Container(
+                          height: 270,
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                color: Colors.green[300],
+                                height: 90,
+                                child: Row(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        SizedBox(
+                                          height: 30,
+                                        ),
+                                        Text(
+                                          "639 - Pratinha x Shopping Castanheira",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 50,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: <Widget>[
+                                  Text(
+                                    "Tempo de chegada: 1 hora",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  Icon(Icons.departure_board),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.network(
+                                    "https://cdn2.iconfinder.com/data/icons/fat-man/271/fat-man-action-1002-512.png",
+                                    scale: 12,
+                                    color: Colors.red,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text("Cadeira para pessoas obesas"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.accessible,
+                                    color: Colors.green,
+                                    size: 40,
+                                  ),
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Rampa/Elevador para cadeirantes"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Image.network(
+                                    "http://www.inpi.gov.br/menu-servicos/patente/arquivos/freepikflaticon.comoldman.png/@@images/image.png",
+                                    scale: 12,
+                                    color: Colors.green,
+                                  ),
+                                  Text("Prioridades"),
+                                ],
+                              )
+                            ],
+                          ),
+                        ));
               },
             )))),
   ];
   @override
   Widget build(BuildContext context) {
-          return Scaffold(
-            floatingActionButton: FloatingActionButton(
-              backgroundColor: Colors.brown[400],
-              child: Icon(Icons.my_location,),
-              onPressed: (){
-                mapController.move(LatLng(-1.449786, -48.488415), 15);
-              },
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.brown[400],
+        child: Icon(
+          Icons.my_location,
+        ),
+        onPressed: () {
+          mapController.move(LatLng(-1.449786, -48.488415), 15);
+        },
+      ),
+      body: Stack(children: <Widget>[
+        FlutterMap(
+          mapController: mapController,
+          options: MapOptions(
+            center: LatLng(-1.449786, -48.488415),
+            zoom: 15,
+            maxZoom: 20.0,
+            minZoom: 3.0,
+          ),
+          layers: [
+            TileLayerOptions(
+              urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+              subdomains: ['a', 'b', 'c'],
             ),
-            body: Stack(children: <Widget>[
-              FlutterMap(
-                mapController: mapController,
-                options: MapOptions(
-                  center: LatLng(-1.449786, -48.488415),
-                  zoom: 15,
-                  maxZoom: 20.0,
-                  minZoom: 3.0,
-                ),
-                layers: [
-                  TileLayerOptions(
-                    urlTemplate:
-                        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                    subdomains: ['a', 'b', 'c'],
-                  ),
-                  MarkerLayerOptions(
-                    markers: listMarkers,
-                  )
-                ],
-              ),
-              InputSearch(mapController: mapController,),
-            ]),
-          );
-        //});
+            MarkerLayerOptions(
+              markers: listMarkers,
+            )
+          ],
+        ),
+        InputSearch(
+          mapController: mapController,
+        ),
+      ]),
+    );
+    //});
   }
 }
